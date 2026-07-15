@@ -1,0 +1,19 @@
+camera:
+  image_width: 640
+  image_height: 480
+  intrinsics:
+    fx: 500.0
+    fy: 500.0
+    cx: 320.0
+    cy: 240.0
+
+scene:
+  seed: 42
+  num_valid_points: 100
+  num_outside_points: 10
+  num_behind_points: 10
+  min_depth: 2.0
+  max_depth: 10.0
+
+output:
+  figure_path: assets/figures/m01_camera_projection.png
