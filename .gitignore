@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+*.conda
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+.env.*
+
+# Dataset
+data/raw/
+data/processed/
+data/cache/
+
+# Experiment outputs
+experiments/**/outputs/
+outputs/
+runs/
+wandb/
+
+# Models and checkpoints
+checkpoints/
+weights/
+*.ckpt
+*.pth
+*.pt
+*.onnx
+
+# Reconstruction outputs
+*.ply
+*.pcd
+*.obj
+*.stl
+*.las
+*.bin
+*.npy
+*.npz
+
+# COLMAP
+database.db
+sparse/
+dense/
+stereo/
+
+# Nerfstudio / 3DGS
+nerfstudio_models/
+dataparser_transforms.json
+cameras.json
+cfg_args
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
