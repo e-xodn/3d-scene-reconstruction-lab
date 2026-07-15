@@ -25,6 +25,21 @@ A reproducible study repository for learning and evaluating 3D scene reconstruct
 
 See [ROADMAP.md](ROADMAP.md) for details.
 
+## Current Milestone
+
+**M1: Camera Geometry** — coordinate transformations and pinhole camera
+projection/unprojection. See
+[reports/milestone-reports/M1-camera-geometry.md](reports/milestone-reports/M1-camera-geometry.md).
+
+```bash
+python -m pip install -e ".[dev]"
+pytest -q
+python scripts/demo_camera_geometry.py --config configs/camera_geometry/example.yaml
+```
+
+The demo saves a projection visualization to
+`assets/figures/m01_camera_projection.png`.
+
 ## Repository Structure
 
 ```text
