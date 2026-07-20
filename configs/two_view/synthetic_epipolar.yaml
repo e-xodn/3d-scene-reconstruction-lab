@@ -1,0 +1,40 @@
+camera1:
+  image_width: 640
+  image_height: 480
+  intrinsics:
+    fx: 520.0
+    fy: 515.0
+    cx: 320.0
+    cy: 240.0
+
+camera2:
+  image_width: 640
+  image_height: 480
+  intrinsics:
+    fx: 525.0
+    fy: 520.0
+    cx: 318.0
+    cy: 242.0
+
+relative_pose:
+  rotation_degrees:
+    x: 1.0
+    y: 7.0
+    z: -1.5
+  translation:
+    x: -0.45
+    y: 0.02
+    z: 0.05
+
+scene:
+  seed: 42
+  num_points: 120
+  x_range: [-2.5, 2.5]
+  y_range: [-1.8, 1.8]
+  z_range: [4.0, 12.0]
+  noise_std_px: 0.5
+  max_sampling_iterations: 100000
+
+visualization:
+  num_correspondences: 12
+  figure_path: assets/figures/m02a_epipolar_geometry.png
