@@ -1,0 +1,62 @@
+{
+  "image1_keypoints": 801,
+  "image2_keypoints": 779,
+  "forward_ratio_match_count": 238,
+  "mutual_match_count": 204,
+  "ransac_inlier_count": 197,
+  "ransac_inlier_ratio": 0.9656862745098039,
+  "ransac_attempted_iterations": 6,
+  "ransac_valid_models": 6,
+  "ransac_skipped_degenerate_samples": 0,
+  "median_inlier_sampson_distance": 0.009872961213040349,
+  "mean_inlier_sampson_distance": 0.08399907867476192,
+  "pose_candidate_positive_depth_counts": [
+    0,
+    197,
+    0,
+    0
+  ],
+  "selected_pose_index": 1,
+  "positive_depth_count": 197,
+  "positive_depth_ratio": 1.0,
+  "triangulated_point_count": 197,
+  "filtered_point_count": 39,
+  "mean_reprojection_error_image1_px": 5.120340148101182,
+  "median_reprojection_error_image1_px": 5.4901003430813695,
+  "max_reprojection_error_image1_px": 8.98928341911555,
+  "mean_reprojection_error_image2_px": 4.966088622876286,
+  "median_reprojection_error_image2_px": 5.3737203587297655,
+  "max_reprojection_error_image2_px": 8.602615061125128,
+  "mean_combined_reprojection_error_px": 5.043890689843597,
+  "median_combined_reprojection_error_px": 5.438975598798872,
+  "max_combined_reprojection_error_px": 8.798073717555527,
+  "rotation_camera2_camera1": [
+    [
+      0.9991784979838484,
+      -0.03982224680930353,
+      -0.007517833850288613
+    ],
+    [
+      0.04048099281852702,
+      0.9720458932922211,
+      0.23127488094074386
+    ],
+    [
+      -0.0019022058689885334,
+      -0.2313892175378702,
+      0.9728593997181939
+    ]
+  ],
+  "translation_direction_camera2_camera1": [
+    0.006711391576683103,
+    -0.9706664531087197,
+    0.2403364184480627
+  ],
+  "camera2_center_in_camera1_frame": [
+    0.03304483290821109,
+    0.9994108580032093,
+    -0.00927232027913194
+  ],
+  "intrinsics_source_camera1": "ground_truth",
+  "intrinsics_source_camera2": "ground_truth"
+}

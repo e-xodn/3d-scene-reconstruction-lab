@@ -1,0 +1,64 @@
+# Real image pair: Middlebury "templeRing" multi-view stereo benchmark
+# (Seitz, Diebel, Scharstein, Curless, Szeliski). 47 calibrated views of a
+# small plaster object on a turntable/gantry ring; templeR0001.png and
+# templeR0003.png are two views ~15 degrees apart (skip-2), chosen for a
+# good overlap/baseline balance. See data/sample/two_view/README.md.
+images:
+  image1_path: data/sample/two_view/templeRing/templeR0001.png
+  image2_path: data/sample/two_view/templeRing/templeR0003.png
+
+# Intrinsics below are the dataset's published ground-truth calibration
+# (from templeR_par.txt), not an approximation — both views share the same
+# calibrated camera. intrinsics_source is recorded in the output metrics.
+camera1:
+  image_width: 640
+  image_height: 480
+  intrinsics:
+    fx: 1520.4
+    fy: 1525.9
+    cx: 302.32
+    cy: 246.87
+  intrinsics_source: ground_truth
+
+camera2:
+  image_width: 640
+  image_height: 480
+  intrinsics:
+    fx: 1520.4
+    fy: 1525.9
+    cx: 302.32
+    cy: 246.87
+  intrinsics_source: ground_truth
+
+features:
+  method: sift
+  max_features: 5000
+  ratio_threshold: 0.75
+  mutual_check: true
+
+ransac:
+  threshold_px: 1.5
+  max_iterations: 5000
+  confidence: 0.999
+  seed: 42
+  min_inliers: 30
+
+reconstruction:
+  min_positive_depth: 1.0e-8
+  min_positive_depth_ratio: 0.7
+  max_reprojection_error_px: 3.0
+  max_points_for_pose_selection: 1000
+
+visualization:
+  max_raw_matches: 100
+  max_inlier_matches: 100
+  num_epipolar_lines: 15
+  max_3d_points: 5000
+
+output:
+  raw_matches_path: assets/figures/m02b_raw_matches.png
+  inlier_matches_path: assets/figures/m02b_ransac_inliers.png
+  epipolar_path: assets/figures/m02b_epipolar_inliers.png
+  reconstruction_path: assets/figures/m02b_sparse_reconstruction.png
+  pointcloud_path: assets/reconstruction-results/m02b_sparse_points.ply
+  metrics_path: experiments/exp002_two_view_reconstruction/metrics.json
