@@ -25,6 +25,29 @@ A reproducible study repository for learning and evaluating 3D scene reconstruct
 
 See [ROADMAP.md](ROADMAP.md) for details.
 
+## Current Milestone
+
+**M2A: Synthetic Epipolar Geometry** — normalized eight-point fundamental
+matrix estimation and epipolar-constraint validation on a synthetic
+calibrated two-camera scene. No real-image feature matching is performed
+in M2A; correspondences are generated directly from known 3D points and a
+known relative pose. See
+[reports/milestone-reports/M2A-epipolar-geometry.md](reports/milestone-reports/M2A-epipolar-geometry.md).
+
+```bash
+python -m pip install -e ".[dev]"
+pytest -q
+python scripts/demo_epipolar_geometry.py --config configs/two_view/synthetic_epipolar.yaml
+```
+
+The demo saves an epipolar-line visualization to
+`assets/figures/m02a_epipolar_geometry.png`.
+
+Previous milestone: **M1: Camera Geometry** — coordinate transformations
+and pinhole camera projection/unprojection. See
+[reports/milestone-reports/M1-camera-geometry.md](reports/milestone-reports/M1-camera-geometry.md)
+(`python scripts/demo_camera_geometry.py --config configs/camera_geometry/example.yaml`).
+
 ## Repository Structure
 
 ```text
