@@ -16,11 +16,24 @@ from reconstruction.geometry.epipolar import (
     skew_symmetric,
     to_homogeneous,
 )
+from reconstruction.geometry.pose import (
+    decompose_essential_matrix,
+    enforce_essential_constraints,
+    essential_from_fundamental,
+    select_pose_by_cheirality,
+)
+from reconstruction.geometry.robust import estimate_fundamental_matrix_ransac
 from reconstruction.geometry.transforms import (
     compose_transforms,
     invert_transform,
     make_transform,
     transform_points,
+)
+from reconstruction.geometry.triangulation import (
+    camera_depths,
+    projection_matrix,
+    triangulate_point_dlt,
+    triangulate_points_dlt,
 )
 
 __all__ = [
@@ -42,4 +55,13 @@ __all__ = [
     "sampson_distances",
     "skew_symmetric",
     "to_homogeneous",
+    "estimate_fundamental_matrix_ransac",
+    "decompose_essential_matrix",
+    "enforce_essential_constraints",
+    "essential_from_fundamental",
+    "select_pose_by_cheirality",
+    "camera_depths",
+    "projection_matrix",
+    "triangulate_point_dlt",
+    "triangulate_points_dlt",
 ]
